@@ -1,0 +1,88 @@
+$colors: (
+  primary: (
+    light: #66b2ff,
+    main: #007bff,
+    dark: #0056b3,
+  ),
+  secondary: (
+    light: #a6a9ad,
+    main: #6c757d,
+    dark: #495057,
+  ),
+  error: (
+    light: #ff444a,
+    main: #ff031c,
+    dark: #a71d2a,
+  ),
+  warning: (
+    light: #ffe066,
+    main: #ffc107,
+    dark: #c69500,
+  ),
+  info: (
+    light: #63c2d3,
+    main: #17a2b8,
+    dark: #117a8b,
+  ),
+  success: (
+    light: #71d28b,
+    main: #28a745,
+    dark: #1e7e34,
+  ),
+  natural: (
+    light: #ffffff,
+    main: #808080,
+    dark: #000000,
+  ),
+);
+
+@each $category, $shades in $colors {
+  @each $shade, $color in $shades {
+    .#{$category}-#{$shade} {
+      color: $color;
+    }
+
+    .hover-#{$category}-#{$shade}:hover {
+      color: $color;
+    }
+
+    .b-#{$category}-#{$shade} {
+      border-color: $color;
+    }
+
+    .bg-#{$category}-#{$shade} {
+      background-color: $color;
+    }
+
+    @each $width in (1, 2, 3, 4, 5) {
+      .b-#{$category}-#{$shade}-#{$width} {
+        border-color: $color;
+        border-width: #{$width}px;
+        border-style: solid;
+      }
+      .bt-#{$category}-#{$shade}-#{$width} {
+        border-top-color: $color;
+        border-top-width: #{$width}px;
+        border-top-style: solid;
+      }
+
+      .bb-#{$category}-#{$shade}-#{$width} {
+        border-bottom-color: $color;
+        border-bottom-width: #{$width}px;
+        border-bottom-style: solid;
+      }
+
+      .bl-#{$category}-#{$shade}-#{$width} {
+        border-left-color: $color;
+        border-left-width: #{$width}px;
+        border-left-style: solid;
+      }
+
+      .br-#{$category}-#{$shade}-#{$width} {
+        border-right-color: $color;
+        border-right-width: #{$width}px;
+        border-right-style: solid;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+$spacing-values: (0, 2, 6, 4, 8, 12, 16, 20, 24, 32, 40, 48);
+
+@each $value in $spacing-values {
+  .m-#{$value} {
+    margin: #{$value}px;
+  }
+
+  .mt-#{$value} {
+    margin-top: #{$value}px;
+  }
+
+  .mb-#{$value} {
+    margin-bottom: #{$value}px;
+  }
+
+  .ml-#{$value} {
+    margin-left: #{$value}px;
+  }
+
+  .mr-#{$value} {
+    margin-right: #{$value}px;
+  }
+  .mx-#{$value} {
+    margin-right: #{$value}px;
+    margin-left: #{$value}px;
+  }
+  .my-#{$value} {
+    margin-top: #{$value}px;
+    margin-bottom: #{$value}px;
+  }
+}
+
+@each $value in $spacing-values {
+  .p-#{$value} {
+    padding: #{$value}px;
+  }
+
+  .pt-#{$value} {
+    padding-top: #{$value}px;
+  }
+
+  .pb-#{$value} {
+    padding-bottom: #{$value}px;
+  }
+
+  .pl-#{$value} {
+    padding-left: #{$value}px;
+  }
+
+  .pr-#{$value} {
+    padding-right: #{$value}px;
+  }
+  .px-#{$value} {
+    padding-right: #{$value}px;
+    padding-left: #{$value}px;
+  }
+  .py-#{$value} {
+    padding-top: #{$value}px;
+    padding-bottom: #{$value}px;
+  }
+}
